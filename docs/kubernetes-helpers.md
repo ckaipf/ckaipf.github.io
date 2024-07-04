@@ -1,6 +1,6 @@
 # Kubernetes helpers with `fzf`
 
-Running Kubernetes clusters often involves memorizing quite a few `kubctl` subcommands, options and pipes. To make this easier, the fuzzy finder tool [`fzf`](https://junegunn.github.io/fzf/) can be used to interactively switch between self-defined shortcuts. Additionally, it facilitates searching.
+Running Kubernetes clusters often involves memorizing quite a few `kubectl` subcommands, options and pipes. To make this easier, the fuzzy finder tool [`fzf`](https://junegunn.github.io/fzf/) can be used to interactively switch between self-defined shortcuts. Additionally, it facilitates searching.
 
 Firstly, it is necessary to define a prefix that will be used for all functions.
 
