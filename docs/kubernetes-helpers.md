@@ -11,7 +11,7 @@ export KUBE_HELPERS_PREFIX='kh'
 Then we define a parent function to toggle between the prefixed function definitions. The bash expansion `$@` is used to pass the arguments to the child call.
 
 ```bash
-${KUBE_HELPERS_PREFIX} () {
+$KUBE_HELPERS_PREFIX () {
     local selected=$(compgen -A function | grep "^${KUBE_HELPERS_PREFIX}_" | fzf)
     $selected $@
 }
@@ -29,7 +29,7 @@ Or a interactive way to open a shell session or to run a self-defined command in
 ```bash
 ${KUBE_HELPERS_PREFIX}_pod_shell() {
     local pod=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" | fzf)
-    kubectl exec -it ${pod} -- "$@" || kubectl exec -it ${pod} -- /bin/bash || kubectl exec -it ${pod} -- /bin/sh
+    kubectl exec -it $pod -- "$@" || kubectl exec -it $pod -- /bin/bash || kubectl exec -it $pod -- /bin/sh
 }
 ```
 
