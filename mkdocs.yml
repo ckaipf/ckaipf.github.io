@@ -10,11 +10,19 @@ theme:
       accent: purple
   features:
   - navigation.indexes
-  favicon: assets/1F52E_color.png
-  logo: assets/1F52E_color.png
+  - navigation.footer
+  - navigation.tabs
+  icon:
+    logo: material/crystal-ball
   font:
     text: Source Code Pro
 
+nav:
+  - About me: 'index.md'
+  - Kubernetes helpers: 
+      - Helpers with fzf: 'kubernetes-helpers.md'
+      - Sniff Kubernetes pods: 'sniff-kubernetes-pods.md'
+  - Legal Notice: 'legal-notice.md'
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -24,3 +32,25 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - attr_list
+  - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/ckaipf
+  # consent:
+  #     title: Cookie consent
+  #     description: >- 
+  #       We use cookies to recognize your repeated visits and preferences, as well
+  #       as to measure the effectiveness of our documentation and whether users
+  #       find what they're searching for. With your consent, you're helping us to
+  #       make our documentation better.
+
+
+copyright: >
+  Copyright &copy; 2024 - 2024 Camill Kaipf
+
+plugins:
+  - privacy
