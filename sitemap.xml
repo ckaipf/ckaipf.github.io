@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ckaipf.github.io/legal-notice/</loc>
+         <lastmod>2024-07-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ckaipf.github.io/sniff-kubernetes-pods/</loc>
          <lastmod>2024-07-06</lastmod>
          <changefreq>daily</changefreq>
