@@ -1,27 +1,19 @@
 site_name: Camill Kaipf
 site_url: https://ckaipf.github.io
-repo_url: https://github.com/ckaipf/ckaipf.github.io
 
 theme:
   name: material
   palette:
-    # Palette toggle for light mode
-    - scheme: default
-      primary: indigo
-      accent: purple
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-
     # Palette toggle for dark mode
     - scheme: slate
-      primary: indigo
+      primary: black
       accent: purple
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
   - navigation.indexes
+  favicon: assets/1F52E_color.png
+  logo: assets/1F52E_color.png
+  font:
+    text: Source Code Pro
 
 markdown_extensions:
   - pymdownx.highlight:
