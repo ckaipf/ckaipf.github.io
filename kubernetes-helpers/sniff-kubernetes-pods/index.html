@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://ckaipf.github.io/kubernetes-helpers/">
+        <link rel="canonical" href="https://ckaipf.github.io/kubernetes-helpers/sniff-kubernetes-pods/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../kubernetes-helpers/">
       
       
-        <link rel="next" href="../sniff-kubernetes-pods/">
+        <link rel="next" href="../../istio/enable-passthrough-monitoring/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Helpers with fzf - Camill Kaipf</title>
+        <title>Sniff Kubernetes pods - Camill Kaipf</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -43,12 +43,12 @@
         
         
         
-        <link rel="stylesheet" href="../assets/external/fonts.googleapis.com/css.d1274daf.css">
+        <link rel="stylesheet" href="../../assets/external/fonts.googleapis.com/css.d1274daf.css">
         <style>:root{--md-text-font:"Source Code Pro";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes-helpers-with-fzf" class="md-skip">
+        <a href="#sniff-kubernetes-pods" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Camill Kaipf" class="md-header__button md-logo" aria-label="Camill Kaipf" data-md-component="logo">
+    <a href="../.." title="Camill Kaipf" class="md-header__button md-logo" aria-label="Camill Kaipf" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9.38 8.38 2.12.96 2.12-.96-.96 2.12.96 2.12-2.12-.96-2.12.96.96-2.12-.96-2.12M16.5 2.5l1.09 2.91L20.5 6.5l-2.91 1.09-1.09 2.91-1.09-2.91L12.5 6.5l2.91-1.09L16.5 2.5M6 19h1v-1a1 1 0 0 1 1-1h.26a7.473 7.473 0 0 1-3.76-6.5A7.5 7.5 0 0 1 12 3c1.05 0 2.05.22 2.96.61l-.37.98-1.42.53C12.79 5.04 12.4 5 12 5a5.5 5.5 0 0 0-5.5 5.5A5.5 5.5 0 0 0 12 16c2.91 0 5.3-2.27 5.5-5.13l.91-2.46.71-.27c.25.74.38 1.54.38 2.36 0 2.78-1.5 5.2-3.76 6.5H16a1 1 0 0 1 1 1v1h1a2 2 0 0 1 2 2v1H4v-1a2 2 0 0 1 2-2Z"/></svg>
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Helpers with fzf
+              Sniff Kubernetes pods
             
           </span>
         </div>
@@ -152,7 +152,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -173,7 +173,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../kubernetes-helpers/" class="md-tabs__link">
           
   
     
@@ -190,8 +190,28 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../istio/enable-passthrough-monitoring/" class="md-tabs__link">
+          
+  
+    
+  
+  Istio
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
     <li class="md-tabs__item">
-      <a href="../legal-notice/" class="md-tabs__link">
+      <a href="../../legal-notice/" class="md-tabs__link">
         
   
     
@@ -225,7 +245,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Camill Kaipf" class="md-nav__button md-logo" aria-label="Camill Kaipf" data-md-component="logo">
+    <a href="../.." title="Camill Kaipf" class="md-nav__button md-logo" aria-label="Camill Kaipf" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m9.38 8.38 2.12.96 2.12-.96-.96 2.12.96 2.12-2.12-.96-2.12.96.96-2.12-.96-2.12M16.5 2.5l1.09 2.91L20.5 6.5l-2.91 1.09-1.09 2.91-1.09-2.91L12.5 6.5l2.91-1.09L16.5 2.5M6 19h1v-1a1 1 0 0 1 1-1h.26a7.473 7.473 0 0 1-3.76-6.5A7.5 7.5 0 0 1 12 3c1.05 0 2.05.22 2.96.61l-.37.98-1.42.53C12.79 5.04 12.4 5 12 5a5.5 5.5 0 0 0-5.5 5.5A5.5 5.5 0 0 0 12 16c2.91 0 5.3-2.27 5.5-5.13l.91-2.46.71-.27c.25.74.38 1.54.38 2.36 0 2.78-1.5 5.2-3.76 6.5H16a1 1 0 0 1 1 1v1h1a2 2 0 0 1 2 2v1H4v-1a2 2 0 0 1 2-2Z"/></svg>
@@ -243,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -309,6 +329,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubernetes-helpers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Helpers with fzf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -325,7 +366,7 @@
         
   
   <span class="md-ellipsis">
-    Helpers with fzf
+    Sniff Kubernetes pods
   </span>
   
 
@@ -336,6 +377,55 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Istio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Istio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -343,11 +433,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../sniff-kubernetes-pods/" class="md-nav__link">
+      <a href="../../istio/enable-passthrough-monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Sniff Kubernetes pods
+    Enable monitoring of passthrough traffic
   </span>
   
 
@@ -371,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../legal-notice/" class="md-nav__link">
+      <a href="../../legal-notice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,29 +507,32 @@
                   
 
 
-<h1 id="kubernetes-helpers-with-fzf">Kubernetes helpers with <code>fzf</code></h1>
-<p>Running Kubernetes clusters often involves memorizing quite a few <code>kubectl</code> subcommands, options and pipes. To make this easier, the fuzzy finder tool <a href="https://junegunn.github.io/fzf/"><code>fzf</code></a> can be used to interactively switch between self-defined shortcuts. Additionally, it facilitates searching.</p>
-<p>Firstly, it is necessary to define a prefix that will be used for all functions.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">KUBE_HELPERS_PREFIX</span><span class="o">=</span><span class="s1">&#39;kh&#39;</span>
+<h1 id="sniff-kubernetes-pods">Sniff Kubernetes pods</h1>
+<p>The next example shows how network debugging in Kubernetes can be simplified. Analyzing traffic in a pod can quickly become complex. TLS and mTLS, for example, can be managed by a backend or by a service mesh. The following function can be used to get a quick actual state. It uses ephemeral containers and <code>tcpdump</code> to get a network dump. The dump is then copied to the host to be analyzed with e.g. Wireshark.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="si">${</span><span class="nv">KUBE_HELPERS_PREFIX</span><span class="si">}</span>_sniff_pod<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">pod</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--no-headers<span class="w"> </span>-o<span class="w"> </span>custom-columns<span class="o">=</span><span class="s2">&quot;:metadata.name&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>fzf<span class="k">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">timestamp</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">target_local_path</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="p">~</span><span class="si">}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">max_time</span><span class="o">=</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="nv">30</span><span class="si">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">dump_name</span><span class="o">=</span><span class="nv">$pod</span>-<span class="nv">$timestamp</span>.pcap
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span>kubectl<span class="w"> </span>debug<span class="w"> </span><span class="nv">$pod</span><span class="w"> </span>-it<span class="w"> </span>--attach<span class="o">=</span><span class="nb">false</span><span class="w"> </span>-c<span class="w"> </span>tcpdump-<span class="nv">$timestamp</span><span class="w"> </span>--image<span class="o">=</span>nicolaka/netshoot<span class="w"> </span>--<span class="w"> </span>timeout<span class="w"> </span><span class="nv">$max_time</span><span class="w"> </span>tcpdump<span class="w"> </span>-i<span class="w"> </span>any<span class="w"> </span>-vv<span class="w"> </span>-s<span class="w"> </span><span class="m">65535</span><span class="w"> </span>-w<span class="w"> </span><span class="nv">$dump_name</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span>sleep<span class="w"> </span><span class="m">5</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nv">stoptime</span><span class="o">=</span><span class="k">$((</span><span class="o">(</span><span class="nv">max_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">5</span><span class="o">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)))</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span><span class="w"> </span>-lt<span class="w"> </span><span class="nv">$stoptime</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span>kubectl<span class="w"> </span>cp<span class="w"> </span>-c<span class="w"> </span>tcpdump-<span class="nv">$timestamp</span><span class="w"> </span><span class="nv">$pod</span>:<span class="nv">$dump_name</span><span class="w"> </span><span class="nv">$target_local_path</span>/<span class="nv">$dump_name</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span>sleep<span class="w"> </span><span class="m">1</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">done</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span>sleep<span class="w"> </span><span class="m">4</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="c1"># Ensure container was terminated</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span><span class="nv">$pod</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.status.ephemeralContainerStatuses}&#39;</span><span class="p">|</span><span class="w"> </span>jq<span class="w">  </span><span class="s1">&#39;.[] | select( .name | contains(&#39;</span><span class="se">\&quot;</span>tcpdump-<span class="nv">$timestamp</span><span class="se">\&quot;</span><span class="s1">&#39;)).state&#39;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="o">}</span>
 </span></code></pre></div>
-<p>Then we define a parent function to toggle between the prefixed function definitions. The bash expansion <code>$@</code> is used to pass the arguments to the child call.</p>
-<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">$KUBE_HELPERS_PREFIX</span><span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">selected</span><span class="o">=</span><span class="k">$(</span><span class="nb">compgen</span><span class="w"> </span>-A<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;^</span><span class="si">${</span><span class="nv">KUBE_HELPERS_PREFIX</span><span class="si">}</span><span class="s2">_&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>fzf<span class="k">)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nv">$selected</span><span class="w"> </span><span class="nv">$@</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">}</span>
-</span></code></pre></div>
-Now we can define some shortcuts, e.g. one to return all pod IPs in the cluster.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="si">${</span><span class="nv">KUBE_HELPERS_PREFIX</span><span class="si">}</span>_pod_ips<span class="o">()</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>kubectl<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </span>-A<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.items[] | [ .status.podIP, .metadata.namespace, .metadata.name ] | @tsv &#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>column<span class="w"> </span>-t
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">}</span>
-</span></code></pre></div>
-<p>Or a interactive way to open a shell session or to run a self-defined command in a pod.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="si">${</span><span class="nv">KUBE_HELPERS_PREFIX</span><span class="si">}</span>_pod_shell<span class="o">()</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nb">local</span><span class="w"> </span><span class="nv">pod</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--no-headers<span class="w"> </span>-o<span class="w"> </span>custom-columns<span class="o">=</span><span class="s2">&quot;:metadata.name&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>fzf<span class="k">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="nv">$pod</span><span class="w"> </span>--<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="nv">$pod</span><span class="w"> </span>--<span class="w"> </span>/bin/bash<span class="w"> </span><span class="o">||</span><span class="w"> </span>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span><span class="nv">$pod</span><span class="w"> </span>--<span class="w"> </span>/bin/sh
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="o">}</span>
-</span></code></pre></div>
-<p>Running <code>kh</code> now will prompt us for our defined functions.</p>
+<p>The function can be invoked by either running <code>kh ~ 20</code> or <code>kh_sniff_pod ~ 20</code>.</p>
 
 
 
@@ -469,7 +562,7 @@ Now we can define some shortcuts, e.g. one to return all pod IPs in the cluster.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: About me">
+          <a href="../kubernetes-helpers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Helpers with fzf">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -479,20 +572,20 @@ Now we can define some shortcuts, e.g. one to return all pod IPs in the cluster.
                 Previous
               </span>
               <div class="md-ellipsis">
-                About me
+                Helpers with fzf
               </div>
             </div>
           </a>
         
         
           
-          <a href="../sniff-kubernetes-pods/" class="md-footer__link md-footer__link--next" aria-label="Next: Sniff Kubernetes pods">
+          <a href="../../istio/enable-passthrough-monitoring/" class="md-footer__link md-footer__link--next" aria-label="Next: Enable monitoring of passthrough traffic">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Sniff Kubernetes pods
+                Enable monitoring of passthrough traffic
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -546,10 +639,10 @@ Now we can define some shortcuts, e.g. one to return all pod IPs in the cluster.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.footer", "navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.footer", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
