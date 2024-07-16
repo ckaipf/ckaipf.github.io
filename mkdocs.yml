@@ -20,8 +20,10 @@ theme:
 nav:
   - About me: 'index.md'
   - Kubernetes helpers: 
-      - Helpers with fzf: 'kubernetes-helpers.md'
-      - Sniff Kubernetes pods: 'sniff-kubernetes-pods.md'
+      - Helpers with fzf: 'kubernetes-helpers/kubernetes-helpers.md'
+      - Sniff Kubernetes pods: 'kubernetes-helpers/sniff-kubernetes-pods.md'
+  - Istio:
+      - Enable monitoring of passthrough traffic: 'istio/enable-passthrough-monitoring.md'
   - Legal Notice: 'legal-notice.md'
 markdown_extensions:
   - pymdownx.highlight:
