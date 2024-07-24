@@ -11,19 +11,15 @@ ${KUBE_HELPERS_PREFIX}_sniff_pod() {
     local dump_name=$pod-$timestamp.pcap
     
     kubectl debug $pod -it --attach=false -c tcpdump-$timestamp --image=nicolaka/netshoot -- timeout $max_time tcpdump -i any -vv -s 65535 -w $dump_name
+    kubectl wait --for='jsonpath={.status.ephemeralContainerStatuses[?(@.name=="tcpdump-'$timestamp'")].state.running}' pod/$pod  
 
-    sleep 5
-
-    stoptime=$(((max_time - 5) + $(date +%s)))
-    while [ $(date +%s) -lt $stoptime ]; do
+    while true; do
+        IS_RUNNING=$(kubectl get pod $pod -o jsonpath='{.status.ephemeralContainerStatuses[?(@.name=="tcpdump-'$timestamp'")].state.running}')
+        if [ -z "${IS_RUNNING}" ]; then break; fi
         kubectl cp -c tcpdump-$timestamp $pod:$dump_name $target_local_path/$dump_name
-        sleep 1
     done
 
-    sleep 4
-    
-    # Ensure container was terminated
-    kubectl get pod $pod -o jsonpath='{.status.ephemeralContainerStatuses}'| jq  '.[] | select( .name | contains('\"tcpdump-$timestamp\"')).state'
+    kubectl wait --for='jsonpath={.status.ephemeralContainerStatuses[?(@.name=="tcpdump-'$timestamp'")].state.terminated}' pod/$pod  
 }
 ```
 
