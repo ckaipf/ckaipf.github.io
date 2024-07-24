@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ckaipf.github.io/</loc>
-         <lastmod>2024-07-16</lastmod>
+         <lastmod>2024-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ckaipf.github.io/legal-notice/</loc>
-         <lastmod>2024-07-16</lastmod>
+         <lastmod>2024-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ckaipf.github.io/istio/enable-passthrough-monitoring/</loc>
-         <lastmod>2024-07-16</lastmod>
+         <lastmod>2024-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ckaipf.github.io/kubernetes-helpers/kubernetes-helpers/</loc>
-         <lastmod>2024-07-16</lastmod>
+         <lastmod>2024-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ckaipf.github.io/kubernetes-helpers/sniff-kubernetes-pods/</loc>
-         <lastmod>2024-07-16</lastmod>
+         <lastmod>2024-07-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
