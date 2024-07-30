@@ -14,8 +14,8 @@ ${KUBE_HELPERS_PREFIX}_sniff_pod() {
     kubectl wait --for='jsonpath={.status.ephemeralContainerStatuses[?(@.name=="tcpdump-'$timestamp'")].state.running}' pod/$pod  
 
     while true; do
-        IS_RUNNING=$(kubectl get pod $pod -o jsonpath='{.status.ephemeralContainerStatuses[?(@.name=="tcpdump-'$timestamp'")].state.running}')
-        if [ -z "${IS_RUNNING}" ]; then break; fi
+        is_running=$(kubectl get pod $pod -o jsonpath='{.status.ephemeralContainerStatuses[?(@.name=="tcpdump-'$timestamp'")].state.running}')
+        if [ -z "${is_running}" ]; then break; fi
         kubectl cp -c tcpdump-$timestamp $pod:$dump_name $target_local_path/$dump_name
     done
 
